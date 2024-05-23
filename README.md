@@ -1,13 +1,14 @@
-/
-    -src/
-        index.js    //server
-        models/
-        controllers/
-        middlewares/
-        services/
-        utils/
-        config/
-        repository/
+`architecture`
+      
+        -src/
+            index.js    //server
+            models/
+            controllers/
+            middlewares/
+            services/
+            utils/
+            config/
+            repository/
 
     -tests/[last]
     -static/
