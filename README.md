@@ -28,6 +28,14 @@ piece of code
 and execute `npx sequelize db:create`
 
 
+`Flights system design`
+
+
+![flights_system_design](https://github.com/Rahemanali-24/FlightsAndSearchService/assets/159017790/cb00d6dd-0432-4d7e-be83-84da4c0c63dc)
+
+
+
+
 `architecture`
 
         -src/
