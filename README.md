@@ -1,5 +1,5 @@
 `architecture`
-      
+
         -src/
             index.js    //server
             models/
@@ -10,9 +10,9 @@
             config/
             repository/
 
-    -tests/[last]
-    -static/
-    -temp/
+          - tests/[last]
+          - static/
+          - temp/
 
 
     if you are not making src folder then if you tests or static thing that you want 
