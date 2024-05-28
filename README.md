@@ -28,6 +28,10 @@ piece of code
 and execute `npx sequelize db:create`
 
 
+`npx sequelize db:migrate`
+
+
+
 `Flights system design`
 
 
@@ -47,7 +51,8 @@ and execute `npx sequelize db:create`
    - A city has many airports but one airport belongs to a city
    - One airport can have many flights, but a flight belongs to one airport
 
-
+    Migration Help you to do incremental changes to you
+    
    
 ![Screenshot from 2024-05-27 12-27-47](https://github.com/Rahemanali-24/FlightsAndSearchService/assets/159017790/25027061-0b97-4d52-9bd2-cbbf0652e49b)
 
