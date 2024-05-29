@@ -1,19 +1,22 @@
 const {CityService} = require('../services/index');
-
 const cityService = new CityService();
+
+
+const {	StatusCodes} = require('http-status-codes');
+
 
 const create = async(req,res)=>{
     try{
-        const city = await cityService.createCity(req.body);
-        return res.status(201).json({
-            data:city,
+        const response = await cityService.createCity(req.body);
+        return res.status(StatusCodes.CREATED).json({
+            data:response,
             success:true,
             message:"Successfully created a city",
             error:{},
         });
     }catch(error){
         console.log(error);
-        return res.status(500).json({
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
             data:{},
             success:false,
             message:"Not able to create a city",
@@ -25,7 +28,7 @@ const create = async(req,res)=>{
 const destroy = async(req,res)=>{
     try{
         const response = await cityService.deleteCity(req.params.cityId);
-        return res.status(200).json({
+        return res.status(StatusCodes.OK).json({
             data:response,
             success:true,
             message:"Successfully deleted a city",
@@ -33,7 +36,7 @@ const destroy = async(req,res)=>{
         });
     }catch(error){
         console.log(error);
-        return res.status(500).json({
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
             data:{},
             success:false,
             message:"Not able to delete the city",
@@ -45,7 +48,7 @@ const destroy = async(req,res)=>{
 const update = async(req,res)=>{
     try{
         const response = await cityService.updateCity(req.params.cityId,req.body);
-        return res.status(200).json({
+        return res.status(StatusCodes.OK).json({
             data:response,
             success:true,
             message:"Successfully update the city",
@@ -54,7 +57,7 @@ const update = async(req,res)=>{
 
     }catch(error){
         console.log(error);
-        return res.status(500).json({
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
             data:{},
             success:false,
             message:"Not able to update the city",
@@ -66,7 +69,7 @@ const update = async(req,res)=>{
 const get = async(req,res)=>{
     try{
         const response = cityService.getCity(req.params.cityId);
-        return res.status(200).json({
+        return res.status(StatusCodes.OK).json({
             data:response,
             success:true,
             message:"Successfully Fetched a city",
@@ -74,7 +77,7 @@ const get = async(req,res)=>{
         });
     }catch(error){
         console.log(error);
-        return res.status(500).json({
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
             data:{},
             success:false,
             message:"Not able to get the city",
@@ -86,5 +89,5 @@ module.exports = {
     create,
     destroy,
     update,
-    get
+    get,
 }

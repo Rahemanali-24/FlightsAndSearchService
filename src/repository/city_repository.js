@@ -10,7 +10,7 @@ class CityRepository {
       return city;
     } catch (error) {
       console.log(error);
-      // throw {error};
+      throw {error};
     }
   }
 
@@ -24,7 +24,7 @@ class CityRepository {
       return true;
     } catch (error) {
       console.log(error);
-      // throw {error};
+      throw {error};
     }
   }
 
@@ -38,6 +38,7 @@ class CityRepository {
       return city;
     } catch (error) {
       console.log(error);
+      throw {error};
     }
   }
 
@@ -48,6 +49,7 @@ class CityRepository {
       return city;
     } catch (error) {
       console.log(error);
+      throw {error};
     }
   }
 }
