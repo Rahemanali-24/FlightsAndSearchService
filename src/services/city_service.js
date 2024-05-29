@@ -42,10 +42,12 @@ class CityService{
         }
      }
 
-     async getCity(cityId){
+     async getCity(id){
         try{    
 
-            const city = await this.cityRepository.getCity(cityId);
+            const city = await this.cityRepository.getCity(id);
+
+            
             return city;
 
         }catch(error){

@@ -13,10 +13,22 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+  // City.init({
+  //   name: DataTypes.STRING,
+  //   unique:true,
+  //   allowNull: false,
+  // }, {
+  //   sequelize,
+  //   modelName: 'City',
+  // });
+
+
   City.init({
-    name: DataTypes.STRING,
-    unique:true,
-    allowNull: false,
+    name: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'City',

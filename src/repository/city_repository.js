@@ -42,13 +42,13 @@ class CityRepository {
     }
   }
 
-  async getCity(cityId) {
+  async getCity(id) {
     try {
-      const city = await City.findByPk(cityId);
-
+      const city = await City.findByPk(id);
+     
       return city;
     } catch (error) {
-      console.log(error);
+      console.log('Something went wrong in the repository layer');
       throw {error};
     }
   }
