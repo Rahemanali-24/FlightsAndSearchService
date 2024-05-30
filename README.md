@@ -56,6 +56,19 @@ and execute `npx sequelize db:create`
    
 ![Screenshot from 2024-05-27 12-27-47](https://github.com/Rahemanali-24/FlightsAndSearchService/assets/159017790/25027061-0b97-4d52-9bd2-cbbf0652e49b)
 
+
+
+##Tables
+
+### City -> id,name,createdAt,updatedAt,
+### Airport -> id,name,address,city_id,createdAt,updatedAt
+    Relationship -> City has many airports and Airport belongs to a city.(one to many)
+    
+
+
+
+
+
 `architecture`
 
         -src/
