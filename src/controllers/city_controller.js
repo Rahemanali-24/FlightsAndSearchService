@@ -87,9 +87,33 @@ const get = async(req,res)=>{
         });
     }
 }
+
+
+const getAll = async(req,res)=>{
+    try{
+
+        const cities = await cityService.getAllCities();
+        return res.status(StatusCodes.OK).json({
+            data:cities,
+            success:true,
+            message:"Successfully Fetched All cities",
+            error:{},
+        });
+
+    }catch(error){
+        console.log(error);
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+            data:{},
+            success:false,
+            message:"Not able to get the All city",
+            error:error,
+        });
+    }
+}
 module.exports = {
     create,
     destroy,
     update,
     get,
+    getAll
 }

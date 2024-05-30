@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   //this is the mistake if you do this it will give error for
   //Unknown column 'unique' in 'field list' 
   // City.init({
+    
   //   name: DataTypes.STRING,
   //   unique:true,
   //   allowNull: false,
