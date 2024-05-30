@@ -11,13 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      //one to many
+      this.hasMany(models.Airport,{
+        foreignKey:'cityId',
+      });
     }
   }
 
   //this is the mistake if you do this it will give error for
   //Unknown column 'unique' in 'field list' 
   // City.init({
-    
+
   //   name: DataTypes.STRING,
   //   unique:true,
   //   allowNull: false,
